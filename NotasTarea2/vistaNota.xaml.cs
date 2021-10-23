@@ -28,7 +28,6 @@ namespace NotasTarea2
                 double notaSeguimiento2 = txtNotaSegP2.Text != "" ? Convert.ToDouble(txtNotaSegP2.Text) : 0;
                 double examen2 = txtExaSegP2.Text != "" ? Convert.ToDouble(txtExaSegP2.Text) : 0;
 
-
                 if (verfRango(notaSeguimiento1, txtNotaSegP1) && verfRango(examen1, txtExaSegP1) && verfRango(notaSeguimiento2, txtNotaSegP2) && verfRango(examen2, txtExaSegP2))
                 {
                     double parcial1 = calcularParcial(notaSeguimiento1, examen1, txtConvNotaSegP1, txtConvExaSegP1);
