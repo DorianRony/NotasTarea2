@@ -1,0 +1,78 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="NotasTarea2.vistaNota">
+    <ContentPage.Content>
+        <StackLayout BackgroundColor="Beige">
+            <Frame BackgroundColor="#2196F3" Padding="10" CornerRadius="0">
+                <Label Text="Calculo Notas" HorizontalTextAlignment="Center" TextColor="Beige" FontSize="18"/>
+            </Frame>
+
+            <Frame BackgroundColor="#088da5" Padding="10" CornerRadius="0">
+                <Label x:Name="txtEstudiante" HorizontalTextAlignment="Center" TextColor="Beige" FontSize="18"/>
+            </Frame>
+
+            <Frame BackgroundColor="#088da5" Padding="10" CornerRadius="0">
+                <Label Text="Parcial 1" HorizontalTextAlignment="Center" TextColor="Beige" FontSize="18"/>
+            </Frame>
+
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+
+                <Label Text="Nota Seguimiento" Grid.Row="0" Grid.Column="0"/>
+                <Entry x:Name="txtNotaSegP1" Placeholder="Ingrese" Keyboard="Numeric" TextChanged="txt_TextChanged" Grid.Row="0" Grid.Column="1"/>
+                <Entry x:Name="txtConvNotaSegP1" Keyboard="Numeric" TextChanged="txt_TextChanged" Grid.Row="0" Grid.Column="2" IsReadOnly="True"/>
+
+                <Label Text="Examen" Grid.Row="1" Grid.Column="0"/>
+                <Entry x:Name="txtExaSegP1" Placeholder="Ingrese" Keyboard="Numeric" TextChanged="txt_TextChanged" Grid.Row="1" Grid.Column="1"/>
+                <Entry x:Name="txtConvExaSegP1" Keyboard="Numeric" TextChanged="txt_TextChanged" Grid.Row="1" Grid.Column="2" IsReadOnly="True"/>
+
+                <Label Text="Nota Parcial" Grid.Row="2" Grid.Column="0"/>
+                <Entry x:Name="txtParcial" IsReadOnly="True" Grid.Row="2" Grid.Column="2"/>
+            </Grid>
+
+            <Frame BackgroundColor="#088da5" Padding="10" CornerRadius="0">
+                <Label Text="Parcial 2" HorizontalTextAlignment="Center" TextColor="White" FontSize="18"/>
+            </Frame>
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+
+                <Label Text="Nota Seguimiento" Grid.Row="0" Grid.Column="0"/>
+                <Entry x:Name="txtNotaSegP2" Placeholder="Ingrese" Keyboard="Numeric" TextChanged="txt_TextChanged" Grid.Row="0" Grid.Column="1"/>
+                <Entry x:Name="txtConvNotaSegP2" Keyboard="Numeric" TextChanged="txt_TextChanged" IsReadOnly="True" Grid.Row="0" Grid.Column="2"/>
+
+                <Label Text="Examen" Grid.Row="1" Grid.Column="0"/>
+                <Entry x:Name="txtExaSegP2" Placeholder="Ingrese" Keyboard="Numeric" TextChanged="txt_TextChanged" Grid.Row="1" Grid.Column="1"/>
+                <Entry x:Name="txtConvExaSegP2" Keyboard="Numeric" TextChanged="txt_TextChanged" IsReadOnly="True" Grid.Row="1" Grid.Column="2"/>
+
+                <Label Text="Nota Parcial" Grid.Row="2" Grid.Column="0"/>
+                <Entry x:Name="txtParcial2" IsReadOnly="True" Grid.Row="2" Grid.Column="2"/>
+
+                <Label Text="Nota Final" Grid.Row="3" Grid.Column="0"/>
+                <Entry x:Name="txtFinal" IsReadOnly="True" Grid.Row="3" Grid.Column="2"/>
+            </Grid>
+
+            <Frame BackgroundColor="#088da5" Padding="10" CornerRadius="0">
+                <Label Text="Estado" HorizontalTextAlignment="Center" TextColor="White" FontSize="18"/>
+            </Frame>
+            <Entry x:Name="txtEstado" IsReadOnly="True"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
